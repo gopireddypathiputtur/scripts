@@ -1,0 +1,1 @@
+xcopy "\\vel.co.in\netlogon\CROMA_SS31122018.scr" %windir%\ /Y

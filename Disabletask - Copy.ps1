@@ -1,0 +1,11 @@
+﻿Set-ExecutionPolicy RemoteSigned
+powershell.exe -ex bypass -command “Get-ScheduledTask -TaskName *onedrive* | Disable-ScheduledTask"
+powershell.exe -ex bypass -command “Get-ScheduledTask -TaskName *Proxy* | Disable-ScheduledTask"
+powershell.exe -ex bypass -command “Get-ScheduledTask -TaskName *Microsoft Compatibility Appraiser* | Disable-ScheduledTask"
+powershell.exe -ex bypass -command “Get-ScheduledTask -TaskName *ProgramDataUpdater* | Disable-ScheduledTask"
+powershell.exe -ex bypass -command “Get-ScheduledTask -TaskName *StartupAppTask* | Disable-ScheduledTask"
+powershell.exe -ex bypass -command “Get-ScheduledTask -TaskName *OfficeTelemetryAgentFallBack* | Disable-ScheduledTask"
+powershell.exe -ex bypass -command “Get-ScheduledTask -TaskName *OfficeTelemetryAgentLogOn* | Disable-ScheduledTask"
+powershell.exe -ex bypass -command “Get-ScheduledTask -TaskName *Adobe* | Disable-ScheduledTask"
+powershell.exe -ex bypass -command “Get-ScheduledTask -TaskName *GoogleUpdateTask* | Disable-ScheduledTask"
+powershell.exe -ex bypass -command “Get-ScheduledTask -TaskName *User_Feed_Synchronization* | Disable-ScheduledTask"
