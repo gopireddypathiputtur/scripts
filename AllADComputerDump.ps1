@@ -1,0 +1,1 @@
+﻿get-adcomputer –filter * -property * | select-object Name, dNSHostName, operatingSystem, operatingSystemVersion, Win32_operatingsystem, DistinguishedName, whenCreated, createTimeStamp, DisplayName, Enabled, LastLogonDate, lastLogonTimestamp | export-CSV adComputers010819.csv -NoTypeInformation -Encoding UTF8

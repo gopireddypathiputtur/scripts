@@ -1,0 +1,2 @@
+Exception calling "Send" with "4" argument(s): "Failure sending mail." 04/24/2018 11:59:15
+Exception calling "Send" with "4" argument(s): "Failure sending mail." 04/24/2018 12:02:22

@@ -1,2 +1,2 @@
 ﻿Connect-MsolService
-Set-MsolUserPrincipalName -UserPrincipalName "16536@croma.com" -NewUserPrincipalName "karthik.ganesh@croma.com"
+Set-MsolUserPrincipalName -UserPrincipalName "asma129@croma.com" -NewUserPrincipalName "PMC-Pune-asm-a129@croma.com"

@@ -1,0 +1,3 @@
+(Get-ADUser -filter * |Where {$_.enabled -ne "False"}).count
+
+(Get-ADUser -filter * |Where {$_.enabled -eq "True"}).count

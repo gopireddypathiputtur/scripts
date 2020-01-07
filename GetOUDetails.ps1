@@ -1,0 +1,1 @@
+﻿Get-ADObject -Filter { ObjectClass -eq 'organizationalunit' } |Export-csv OUDetails2.csv

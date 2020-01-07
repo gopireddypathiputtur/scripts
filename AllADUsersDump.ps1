@@ -1,0 +1,1 @@
+﻿get-aduser –filter * -property * | select-object Name, SamAccountName, DistinguishedName, EmailAddress, createTimeStamp, DisplayName, Enabled, Modified, Manager, @{name=”MemberOf”;expression={$_.memberof -join “;”}}, ScriptPath, LastLogonDate, lastLogonTimestamp, Department | export-CSV adusers0901219.csv -NoTypeInformation -Encoding UTF8

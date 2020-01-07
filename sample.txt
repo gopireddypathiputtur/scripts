@@ -1,0 +1,21 @@
+
+Set-ExecutionPolicy RemoteSigned
+
+$UserCredential = Get-Credential
+
+$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
+
+Import-PSSession $Session -DisableNameChecking
+
+
+Get-Content "C:\Scripts\hc.txt" | foreach {Set-CasMailbox $_ -ActiveSyncEnabled $false}
+
+
+
+Get-Content "C:\Scripts\hc.txt" | foreach {Set-CasMailbox $_ -OWAEnabled $true}
+Get-Content "C:\Scripts\hc.txt" | foreach {Set-CasMailbox $_ -OWAForDevicesEnabled $False}
+
+
+Get-CASMailbox -ResultSize Unlimited | where { $_.ActiveSyncEnabled -eq 'True'} |ft name, activesyncenabled –autosize > c:\ActiveSync User.txt
+Get-CASMailbox -ResultSize Unlimited | where { $_.ActiveSyncEnabled -eq 'True'} | ft name, activesyncenabled –autosize > c:\ActiveSyncUser.txt
+Get-CASMailbox -ResultSize Unlimited | where { $_.OWAEnabled -eq 'True'} | ft name, OWAEnabled –autosize > c:\ActiveOWA1.txt

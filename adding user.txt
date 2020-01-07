@@ -1,0 +1,13 @@
+Set-ExecutionPolicy RemoteSigned
+
+$LiveCred = Get-Credential
+
+
+$session = new-PSSession -ConfigurationName Microsoft.Exchange-ConnectionUri https://ps.outlook.com/powershell/ -credential $LiveCred -Authentication Basic -AllowRedirection
+
+
+
+Import-PSSession $Session
+
+
+Set-DistributionGroup -Identity Croma-SM-All@croma.com -AcceptMessagesOnlyFrom @{Add= "ConsumerFinance"}
